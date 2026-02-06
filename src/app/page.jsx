@@ -61,12 +61,15 @@ export default function Home() {
       setLoading(false);
     }
   };
+
+  // Re Initializing the Stored History Array
   useEffect(() => {
     const savedHistory = localStorage.getItem("searchHistory");
     if (savedHistory) {
       setHistory(JSON.parse(savedHistory));
     }
   }, []);
+
   return (
     <div className="min-h-screen">
       <div className="container mx-auto px-4 py-12">

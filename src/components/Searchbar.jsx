@@ -7,6 +7,7 @@ const Searchbar = ({ onCitySearched }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (city.trim()) onCitySearched(city.trim());
+    setCity("");
   };
   return (
     <form className="w-full max-w-2xl" onSubmit={handleSubmit}>
