@@ -1,10 +1,15 @@
 import { Search } from "lucide-react";
 import { useState } from "react";
 
-const Searchbar = () => {
+const Searchbar = ({ onCitySearched }) => {
   const [city, setCity] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (city.trim()) onCitySearched(city.trim());
+  };
   return (
-    <form className="w-full max-w-2xl">
+    <form className="w-full max-w-2xl" onSubmit={handleSubmit}>
       <div className="relative">
         <input
           type="text"

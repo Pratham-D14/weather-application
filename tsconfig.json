@@ -28,7 +28,12 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "**/*.mts",
+    "src/app/layout.jsx",
+    "src/app/page.jsx",
+    "src/components/Searchbar.jsx",
+    "src/components/SearchHistory.jsx",
+    "src/components/WeatherCard.jsx"
   ],
   "exclude": ["node_modules"]
 }
